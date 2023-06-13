@@ -1,4 +1,4 @@
-# Bachelor's Degree Thesis: Control of Mobile Robotic Devices using BCI - Unity Mobile Robot Project
+# Bachelor's Degree Thesis: Control of Mobile Robotic Devices using BCI - Unity Mobile Robot Part
 
 ## About
 This repository contains the Unity part of the Bachelor's Degree Thesis project, focusing on controlling a mobile robotic device using Brain-Computer Interface (BCI). The project consists of two key components: ROS nodes and a Unity application. This repository specifically focuses on the Unity application.
