@@ -1,9 +1,18 @@
 # Bachelor's Degree Thesis: Control of Mobile Robotic Devices using BCI - Unity Mobile Robot Part
 
-## About
-This repository contains the Unity part of the Bachelor's Degree Thesis project, focusing on controlling a mobile robotic device using Brain-Computer Interface (BCI). The project consists of two key components: ROS nodes and a Unity application. This repository specifically focuses on the Unity application.
+## Introduction
 
-The Unity application serves as the user interface for the BCI control. Unity was chosen for this part of the project due to its compatibility with the NextMind device, which only supports development through Unity. 
+This repository is part of my Bachelor's Degree Thesis project, titled "Control of Mobile Robotic Devices using BCI". The aim of this project is to control a mobile robotic device through a Brain-Computer Interface (BCI). The project is split into two main parts: the ROS nodes and a Unity application. This repository focuses on the Unity application, an essential component for the user interface of the BCI control.
+
+The Unity application serves as the primary interface for the user, enabling them to control a mobile robotic device through BCI. The choice of Unity was influenced by its compatibility with the NextMind device, a BCI sensor. Notably, the NextMind device currently supports development only through Unity, making it the ideal choice for this project.
+
+## Time Invested
+
+The creation, development, and refinement of this project required substantial time and effort. I spent several months perfecting the application, accounting for different potential user interactions, and ensuring robust control of the mobile robotic device. I am proud of the time and effort I invested in this project and am excited to share my work.
+
+## Implementation
+
+This Unity application is designed to work in tandem with ROS (Robot Operating System) nodes running on a separate system, in order to control the mobile robotic device. It uses the Micro-ROS-Agent, an adapted version of ROS 2 for microcontrollers, to enable communication between the Unity application and the ROS nodes.
 
 ## Unity Application
 The Unity application I developed for this part presents eight neurotags to the user. Each neurotag corresponds to a specific command that will be sent to a mobile robot. The application uses the ROS2-For-Unity library to ensure effective communication between the Unity application and the ROS nodes controlling the mobile robot.
