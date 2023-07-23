@@ -7,6 +7,7 @@ public class ErrorCounter : MonoBehaviour {
 
   private int errorCount = 0;
   public TMPro.TextMeshProUGUI errorNumText;
+  public CameraNetworkCommandController videoCamera;
 
   void Awake() {
     if (Instance != null) {
@@ -23,6 +24,9 @@ public class ErrorCounter : MonoBehaviour {
     }
     if (Input.GetKeyDown(KeyCode.N)) {
       SubError();
+    }
+    if(Input.GetKeyDown(KeyCode.Q)) {
+      videoCamera.GetQR();
     }
     errorNumText.text = errorCount.ToString();
   }

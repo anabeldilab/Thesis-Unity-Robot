@@ -6,7 +6,7 @@ using ROS2;
 
 public class Ros2Publish : MonoBehaviour {
   private Ros2Start ros2Talker;
-  private IPublisher<std_msgs.msg.Header> action_pub;
+  private IPublisher<std_msgs.msg.Int32> action_pub;
   int n;
 
   void Update() {
@@ -15,32 +15,12 @@ public class Ros2Publish : MonoBehaviour {
     }
   }
 
-  public void OnButtonConnectPress() {
+  public void OnButtonCancelPress() {
     n++;
-    Debug.Log("Neurotag Connect activated " + n + " times.");
+    Debug.Log("Neurotag Cancel activated " + n + " times.");
     if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "CON_/STA";
-      ros2Talker.action_pub.Publish(msg);
-    }
-  }
-
-  public void OnButtonStartAPPress() {
-    n++;
-    Debug.Log("Neurotag StartAP activated " + n + " times.");
-    if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "CON_/SAP";
-      ros2Talker.action_pub.Publish(msg);
-    }
-  }
-
-  public void OnButtonDisconnectPress() {
-    n++;
-    Debug.Log("Neurotag Disconnect activated " + n + " times.");
-    if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "CON_/DIS";
+      std_msgs.msg.Int32 msg = new std_msgs.msg.Int32();
+      msg.Data = 0;
       ros2Talker.action_pub.Publish(msg);
     }
   }
@@ -49,18 +29,8 @@ public class Ros2Publish : MonoBehaviour {
     n++;
     Debug.Log("Neurotag activated " + n + " times.");
     if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();  
-      msg.Frame_id = "ACT_/A1";
-      ros2Talker.action_pub.Publish(msg);
-    }
-  }
-
-  public void OnButtonForwardRightPress() {
-    n++;
-    Debug.Log("Neurotag activated " + n + " times.");
-    if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "ACT_/A2";
+      std_msgs.msg.Int32 msg = new std_msgs.msg.Int32();  
+      msg.Data = 8;
       ros2Talker.action_pub.Publish(msg);
     }
   }
@@ -69,18 +39,8 @@ public class Ros2Publish : MonoBehaviour {
     n++;
     Debug.Log("Neurotag activated " + n + " times.");
     if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "ACT_/A3";
-      ros2Talker.action_pub.Publish(msg);
-    }
-  }
-
-  public void OnButtonBackwardRightPress() {
-    n++;
-    Debug.Log("Neurotag activated " + n + " times.");
-    if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "ACT_/A4";
+      std_msgs.msg.Int32 msg = new std_msgs.msg.Int32();
+      msg.Data = 9;
       ros2Talker.action_pub.Publish(msg);
     }
   }
@@ -89,18 +49,8 @@ public class Ros2Publish : MonoBehaviour {
     n++;
     Debug.Log("Neurotag activated " + n + " times.");
     if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "ACT_/A5";
-      ros2Talker.action_pub.Publish(msg);
-    }
-  }
-
-  public void OnButtonBackwardLeftPress() {
-    n++;
-    Debug.Log("Neurotag activated " + n + " times.");
-    if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "ACT_/A6";
+      std_msgs.msg.Int32 msg = new std_msgs.msg.Int32();
+      msg.Data = 2;
       ros2Talker.action_pub.Publish(msg);
     }
   }
@@ -109,18 +59,28 @@ public class Ros2Publish : MonoBehaviour {
     n++;
     Debug.Log("Neurotag activated " + n + " times.");
     if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "ACT_/A7";
+      std_msgs.msg.Int32 msg = new std_msgs.msg.Int32();
+      msg.Data = 7;
       ros2Talker.action_pub.Publish(msg);
     }
   }
 
-  public void OnButtonForwardLeftPress() {
+  public void OnButtonTotalLeftPress() {
     n++;
     Debug.Log("Neurotag activated " + n + " times.");
     if(ros2Talker != null && ros2Talker.action_pub != null) {
-      std_msgs.msg.Header msg = new std_msgs.msg.Header();
-      msg.Frame_id = "ACT_/A8";
+      std_msgs.msg.Int32 msg = new std_msgs.msg.Int32();
+      msg.Data = 4;
+      ros2Talker.action_pub.Publish(msg);
+    }
+  }
+
+  public void OnButtonTotalRightPress() {
+    n++;
+    Debug.Log("Neurotag activated " + n + " times.");
+    if(ros2Talker != null && ros2Talker.action_pub != null) {
+      std_msgs.msg.Int32 msg = new std_msgs.msg.Int32();
+      msg.Data = 6;
       ros2Talker.action_pub.Publish(msg);
     }
   }
