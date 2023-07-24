@@ -18,11 +18,11 @@ This Unity application is designed to work in tandem with ROS (Robot Operating S
 The Unity application I developed for this part presents eight neurotags to the user. Each neurotag corresponds to a specific command that will be sent to a mobile robot. The application uses the ROS2-For-Unity library to ensure effective communication between the Unity application and the ROS nodes controlling the mobile robot.
 
 ## Version
-This project uses Unity version 2020.3.14f1.
+This project uses Unity version 2022.3.3f1.
 
 ## Prerequisites
 To run this project, you will need:
-- Unity 2020.3.14f1
+- Unity 2022.3.3f1
 - NextMind SDK installed and set up in Unity
 - ROS2-For-Unity library installed in Unity
 
