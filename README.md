@@ -30,6 +30,8 @@ To run this project, you will need:
 Detailed instructions on how to install and setup the project will be added soon.
 
 ## Usage
+First, it is necessary to take into account that you have to go to the Scenes folder of the project and open the main scene, in this case, "SampleScene".
+
 To successfully use this application, it is crucial to correctly position the NextMind device on your head, as it will serve as the primary user interface. Correct positioning is fundamental for ensuring the system's precise operation.
 
 The calibration process for the NextMind device is straightforward and can be directly accessed from the Unity-based application's menu that I have developed. Be sure to follow the provided instructions closely to effectively calibrate your NextMind device.
